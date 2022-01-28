@@ -24,6 +24,10 @@ public class Wallet implements Serializable {
 		this.walletBalance = walletBalance;
 	}
 
+	public Wallet() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public long getWalletId() {
 		return walletId;
 	}

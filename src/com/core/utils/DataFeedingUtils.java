@@ -8,9 +8,15 @@ import com.core.pojo.Wallet;
 public class DataFeedingUtils {
 	
 	private static Map<Long, Wallet> walletMap = null;
+	private static Long walletId = null;
 	
 	static {
+		walletId = Long.valueOf(100000000);
 		walletMap = getPopulatedWallets(walletMap);
+	}
+	
+	public static Long getNextWalletId() {
+		return ++walletId;	
 	}
 
 	public static Map<Long, Wallet> getWalletMap() {
@@ -32,7 +38,8 @@ public class DataFeedingUtils {
 			new Wallet(789046222, "Client Barton", WalletType.PREMIUM, getSdf().parse("19-02-2014"), 23000),
 			new Wallet(799021671, "Bruce Barns", WalletType.PREMIUM, getSdf().parse("14-01-2013"), 29000),
 			new Wallet(854325505, "Nick Fury", WalletType.BASICS, getSdf().parse("24-07-2015"), 26000),			
-			new Wallet(811079023, "Maria Hill", WalletType.FREE, getSdf().parse("04-10-2016"), 35000)
+			new Wallet(811079023, "Maria Hill", WalletType.FREE, getSdf().parse("04-10-2016"), 35000),
+			new Wallet(7777, "Test", WalletType.FREE, getSdf().parse("04-10-2016"), 5000)
 		};
 	}
 	
@@ -45,6 +52,7 @@ public class DataFeedingUtils {
 			for(Wallet wallet : getWallets()) {
 				walletMap.put(wallet.getWalletId(), wallet);
 			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
