@@ -52,8 +52,8 @@ public class Wallet implements Serializable {
 		this.walletType = walletType;
 	}
 
-	public String getWalletRegistrationDate() {
-		return getSdf().format(walletRegistrationDate);
+	public Date getWalletRegistrationDate() {
+		return walletRegistrationDate;
 	}
 
 	public void setWalletRegistrationDate(Date walletRegistrationDate) {
