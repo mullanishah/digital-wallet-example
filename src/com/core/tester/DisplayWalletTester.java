@@ -14,19 +14,31 @@ import com.core.pojo.Wallet;
 public class DisplayWalletTester {
 
 	public static void displayWallets() throws Exception {
-		System.out.println("1.Display all wallets by creation date\n"
-						 + "2.Display wallets by conversions/ Statistics");
-		System.out.println("Enter your choice: ");
+		System.out.println("==========================================");	
+		System.out.println("1.All wallets\n"
+						 + "2.Display all wallets by creation date\n"
+						 + "3.Display wallets by conversions/ Statistics");
+		System.out.println("Enter display choice: ");
 		//int choice = getScanner().nextInt();
 		switch(getScanner().nextInt()) {
 		case 1:
+			printAllWallets();
+			break;
+		case 2:	
 			getWalletsByCreation();
 			break;
-		case 2:
+		case 3:
 			getStatistics();
 			break;
 		default:
-			System.out.println("Invalid choice!!");	
+			System.out.println("Invalid display choice!!");	
+		}
+	}
+	
+	private static void printAllWallets() {
+		
+		for(Wallet wallet : getWalletMap().values()) {
+				System.out.println(wallet);
 		}
 	}
 	

@@ -1,7 +1,6 @@
 package com.core.tester;
 
 import static com.core.utils.DataFeedingUtils.getWalletMap;
-
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
@@ -16,6 +15,7 @@ public class SortWalletTester {
 	
 	public static void sortWallets() throws Exception {
 		
+		System.out.println("==========================================");
 		System.out.println("1.Sort on key\n"
 						 + "2.Sort(on balance)\n"
 						 + "3.Sort on wallet number(Ascending)\n"
@@ -35,7 +35,7 @@ public class SortWalletTester {
 			sortBasedOnWalletDesc();
 			break;
 		default: 
-			System.out.println("Invalid choice!!");
+			System.out.println("Invalid sorting choice!!");
 		}
 	}
 	

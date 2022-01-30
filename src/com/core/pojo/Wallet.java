@@ -9,9 +9,8 @@ public class Wallet implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private long walletId;
-	private String walletHolderName;
-	//private String walletType;  //premium, basic, free, 
-	private WalletType walletType;
+	private String walletHolderName; 
+	private WalletType walletType;						//premium, basic, free,
 	private Date walletRegistrationDate;	
 	private double walletBalance;
 	

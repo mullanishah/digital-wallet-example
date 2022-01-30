@@ -16,6 +16,7 @@ public class WalletTransactionTester {
 		if(srcWallet == null) {
 			throw new WalletHandlingException("Invalid or incorrect wallet number!");
 		} else {
+			System.out.println("==========================================");	
 			System.out.println("1.Add coins to the wallet\n"
 					+ "2.Remove coins from the wallet\n"
 					+ "3.Transfer coins to another wallet");
@@ -61,7 +62,7 @@ public class WalletTransactionTester {
 		System.out.println("Enter destination wallet number: ");
 		long walletNo = getScanner().nextLong();
 		WalletTransaction destWallet = searchWallet(walletNo);
-		if(srcWallet == null) {
+		if(destWallet == null) {
 			throw new WalletHandlingException("Invalid or incorrect destination wallet number!");
 		} else {
 			System.out.println("Enter coin amount to be transfered: ");

@@ -1,16 +1,10 @@
 package com.core.tester;
 
-import java.util.Scanner;
+import static com.core.utils.CommonUtils.getScanner;
 import com.core.pojo.Wallet;
-import com.core.utils.CommonUtils;
 
 public class MainWalletTester {
 	
-	private static Scanner scanner = null;
-	static {
-		scanner = CommonUtils.getScanner();
-	}
-
 	public static void main(String[] args) {
 		
 		int choice = 0;
@@ -22,7 +16,7 @@ public class MainWalletTester {
 				System.out.printf("%-25s %-15s%n", "5.Apply Coupon/Discount", "6.Coin Transfer");
 				System.out.printf("%-25s %-15s%n", "7.Sort", "8.Exit");
 				System.out.println("Enter your choice: ");
-				choice = scanner.nextInt();
+				choice = getScanner().nextInt();
 				switch(choice) {
 				case 1:
 					Wallet wallet = WalletOperationsTester.addNewWallet();
@@ -61,9 +55,6 @@ public class MainWalletTester {
 		System.out.println("===Exiting===");
 		System.exit(0);
 	}
-
-	public static Scanner getScanner() {
-		return scanner;
-	}
+	
 }
 

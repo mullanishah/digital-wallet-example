@@ -10,7 +10,7 @@ public class CommonUtils {
 	
 	static {
 		scanner = new Scanner(System.in);
-		sdf = new SimpleDateFormat("dd-mm-yyyy");
+		sdf = new SimpleDateFormat("dd-MM-yyyy");
 	}
 
 	public static SimpleDateFormat getSdf() {

@@ -12,10 +12,13 @@ public class DiscountAndCouponsTester {
 	public static void applyDiscountOrCoupon() throws Exception {
 		
 		int counter = 0;
-		System.out.println("Enter type of wallet to apply coupon to: ");
+		System.out.println("Enter type of wallet to apply coupon to (Premium, Basics): ");
 		String walletType = getScanner().next();
-		if(walletType.equalsIgnoreCase(WalletType.PREMIUM.toString()) || walletType.equalsIgnoreCase("p")
-				|| walletType.equalsIgnoreCase(WalletType.BASICS.toString()) || walletType.equalsIgnoreCase("b")) {
+		
+		walletType = (walletType.equalsIgnoreCase("p")) ? WalletType.PREMIUM.toString() 
+				: (walletType.equalsIgnoreCase("b") ? walletType = WalletType.BASICS.toString() : WalletType.FREE.toString());
+					
+		if(walletType.equalsIgnoreCase(WalletType.PREMIUM.toString()) || walletType.equalsIgnoreCase(WalletType.BASICS.toString())) {
 			System.out.println("Enter coupon amount :");
 			double amount = getScanner().nextDouble();
 			
