@@ -1,15 +1,12 @@
 package com.core.tester;
 
 import static com.core.utils.CommonUtils.getScanner;
-
-import java.util.Collection;
-
+import static com.core.utils.DataFeedingUtils.getWalletMap;
 import com.core.exceptions.WalletHandlingException;
 import com.core.pojo.Wallet;
-import static com.core.utils.DataFeedingUtils.*;
 import com.core.utils.WalletType;
 
-public class DiscountAndTransferTester {
+public class DiscountAndCouponsTester {
 	
 	@SuppressWarnings("unlikely-arg-type")
 	public static void applyDiscountOrCoupon() throws Exception {
@@ -34,14 +31,6 @@ public class DiscountAndTransferTester {
 			throw new WalletHandlingException("Invalid wallet type!");
 		}		
 		System.out.println("Coupon applied successfully!, " + counter + " wallets updated.");
-	}
-	
-	public static void transferCoins() {
-		
-	}
-	
-	public static void main(String[] args) throws Exception {
-		applyDiscountOrCoupon();
 	}
 
 }

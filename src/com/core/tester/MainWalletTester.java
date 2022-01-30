@@ -19,7 +19,7 @@ public class MainWalletTester {
 				System.out.println("===================== MENU =====================");		
 				System.out.printf("%-25s %-15s%n", "1.Add Wallet Details", "2.Remove Existing Wallet");
 				System.out.printf("%-25s %-15s%n", "3.Search Wallet(By ID)", "4.Display Wallet Details");
-				System.out.printf("%-25s %-15s%n", "5.Apply Coupon Discount", "6.Coin Transfer");
+				System.out.printf("%-25s %-15s%n", "5.Apply Coupon/Discount", "6.Coin Transfer");
 				System.out.printf("%-25s %-15s%n", "7.Sort", "8.Exit");
 				System.out.println("Enter your choice: ");
 				choice = scanner.nextInt();
@@ -40,7 +40,11 @@ public class MainWalletTester {
 					DisplayWalletTester.displayWallets();
 					break;
 				case 5:
+					DiscountAndCouponsTester.applyDiscountOrCoupon();
+					break;
 				case 6:
+					WalletTransactionTester.makeTransaction();
+					break;
 				case 7:
 					SortWalletTester.sortWallets();
 					break;
@@ -62,8 +66,4 @@ public class MainWalletTester {
 		return scanner;
 	}
 }
-
-
-//Map<Long, Wallet> walletMap = DataFeedingUtils.getWalletMap();
-//System.out.println(walletMap);
 

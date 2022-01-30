@@ -20,7 +20,7 @@ public class SortWalletTester {
 						 + "2.Sort(on balance)\n"
 						 + "3.Sort on wallet number(Ascending)\n"
 						 + "4.sort on wallet number(Descending)");
-		System.out.println("Enter your choice: ");
+		System.out.println("Enter your sorting choice: ");
 		switch(getScanner().nextInt()) {
 		case 1:
 			sortBasedOnKey();

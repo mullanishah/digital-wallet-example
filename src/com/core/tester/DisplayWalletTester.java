@@ -47,6 +47,9 @@ public class DisplayWalletTester {
 	
 	private static void getStatistics() throws Exception {
 		
+		//no of wallets
+		System.out.println("Total available wallets: " + getWalletMap().size());
+		
 		//display all keys
 		Set<Long> keys = getWalletMap().keySet();
 		System.out.println("Wallet numbers: " + keys);
